@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from django.views.generic import RedirectView
 import main.views
 
 urlpatterns = [
@@ -25,5 +24,4 @@ urlpatterns = [
     path('blogs/', include('blogs.urls')),
 
     path('admin/', admin.site.urls),
-    path('mail/', RedirectView.as_view(url='https://roundcube.hosting.reg.ru/')),
 ]
